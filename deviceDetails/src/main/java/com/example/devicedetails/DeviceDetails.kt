@@ -2,11 +2,11 @@ package com.example.devicedetails
 
 import android.content.Context
 import android.os.Build
-import android.os.Bundle
 import android.provider.Settings
 import android.telephony.TelephonyManager
 import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class DeviceDetails : AppCompatActivity() {
@@ -29,8 +29,9 @@ class DeviceDetails : AppCompatActivity() {
                 Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
             }
         }
-        val imeiTextView = findViewById<TextView>(R.id.idIMEI)
-        imeiTextView.text = "IMEI ID - "+deviceId
+//        val imeiTextView = findViewById<TextView>(R.id.idIMEI)
+        Toast.makeText(this, deviceId, Toast.LENGTH_SHORT).show()
+//        imeiTextView.text = "IMEI ID - "+deviceId
         Log.d("deviceId", deviceId)
         return deviceId
     }
