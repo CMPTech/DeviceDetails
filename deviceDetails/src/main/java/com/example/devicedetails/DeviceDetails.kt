@@ -32,9 +32,9 @@ object DeviceDetails {
             }
         }
 //        val imeiTextView = findViewById<TextView>(R.id.idIMEI)
-        Toast.makeText(c, deviceId, Toast.LENGTH_SHORT).show()
+//        Toast.makeText(c, deviceId, Toast.LENGTH_SHORT).show()
 //        imeiTextView.text = "IMEI ID - "+deviceId
-        Log.d("deviceId", deviceId)
+//        Log.d("deviceId", deviceId)
         return deviceId
     }
 }
